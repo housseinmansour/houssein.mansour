@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light"></html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1298,10 +1298,8 @@
       if(savedTheme === "light" || savedTheme === "dark"){
         setTheme(savedTheme);
       }else{
-        const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-        setTheme(prefersLight ? "light" : "dark");
+        setTheme("light");
       }
-
       document.getElementById("year").textContent = new Date().getFullYear();
       updateActiveToc();
       window.addEventListener("scroll", updateActiveToc, { passive: true });
