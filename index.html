@@ -1,453 +1,1313 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Houssein Mansour - Page Personnelle</title>
-    <meta name="description" content="Page personnelle de Houssein Mansour, assistant de recherche à l'Université de Bologne.">
-    <meta name="keywords" content="Houssein Mansour, recherche, Université de Bologne, informatique, mathématiques">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="METTRE_ICI_L'URL_DE_VOTRE_SITE">
-    <meta property="og:title" content="Houssein Mansour - Page Personnelle">
-    <meta property="og:description" content="Page personnelle de Houssein Mansour, assistant de recherche à l'Université de Bologne.">
-    <meta property="og:image" content="METTRE_ICI_L'URL_DE_VOTRE_IMAGE">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="METTRE_ICI_L'URL_DE_VOTRE_SITE">
-    <meta property="twitter:title" content="Houssein Mansour - Page Personnelle">
-    <meta property="twitter:description" content="Page personnelle de Houssein Mansour, assistant de recherche à l'Université de Bologne.">
-    <meta property="twitter:image" content="METTRE_ICI_L'URL_DE_VOTRE_IMAGE">
+  <title>Houssein Mansour — PhD Student @ ISAE-SUPAERO | Probabilistic Programming</title>
+  <meta name="description" content="Houssein Mansour — PhD student in Computer Science at ISAE-SUPAERO. Probabilistic programming, program semantics, contextual distances, Bayesian inference, and hybrid systems." />
+  <meta name="author" content="Houssein Mansour" />
+  <meta name="theme-color" content="#0b1220" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f5;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .lang-buttons {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: flex;
-            gap: 5px;
-        }
-        .lang-buttons button {
-            background: #40718a;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            transition: background 0.3s;
-            font-size: 0.9em;
-        }
-        .lang-buttons button:hover {
-            background: #333;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-            padding-top: 50px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #40718a;
-        }
-        header h2 {
-            margin: 0;
-            font-size: 1.5em;
-            color: #4d4d4d;
-        }
-        .profile-pic {
-            width: 150px;
-            height: auto;
-            border-radius: 50%;
-            margin-left: 20px;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-        .welcome-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .welcome-text {
-            flex: 1;
-            max-width: 600px;
-        }
-        .welcome-text h3 {
-            animation: fadeInUp 2s ease-in-out forwards;
-            color: #40718a;
-        }
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .welcome-text p {
-            animation: fadeInUp 2s ease-in-out 1s forwards;
-        }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        nav a {
-            color: #40718a;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-weight: bold;
-            font-size: 1.1em;
-            display: inline-block;
-            margin: 2px;
-            transition: background 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background: #40718a;
-            color: #fff;
-        }
-        .content-section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-        .content-section a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        .content-section a:hover {
-            text-decoration: underline;
-        }
-        .content-section a.report-link {
-            color: #e60000;
-        }
-        .content-section a.report-link:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #555;
-            color: #fff;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #e60000;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .footer-links {
-            margin: 10px 0;
-        }
-        .footer-links a {
-            margin: 0 10px;
-        }
-        .content {
-            display: none;
-        }
-        .content.active {
-            display: block;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .content-section h3,
-        .content-section h4 {
-            color: #40718a;
-        }
-        .content-section h4.workshop-title {
-            color: #333;
-        }
-        .content-section:first-of-type {
-            margin-top: -10px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-            .welcome-section {
-                flex-direction: column;
-            }
-            .profile-pic {
-                margin: 10px 0;
-            }
-            nav a {
-                padding: 8px 10px;
-                font-size: 1em;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            header h2 {
-                font-size: 1.2em;
-            }
-            .lang-buttons {
-                position: static;
-                margin-bottom: 10px;
-                justify-content: center;
-            }
-        }
-        .dark-mode {
-            background-color: #1c1c1c;
-            color: #f0f0f5;
-        }
-        .dark-mode nav a {
-            color: #f0f0f5;
-        }
-        .dark-mode .content-section {
-            background: #333;
-        }
-        .dark-mode footer {
-            background: #222;
-        }
-    </style>
-    <script>
-        function switchLanguage(language) {
-            document.querySelectorAll('.content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-            document.getElementById(language).classList.add('active');
-        }
+  <meta property="og:title" content="Houssein Mansour — PhD Student @ ISAE-SUPAERO" />
+  <meta property="og:description" content="Probabilistic programming • Program semantics • Contextual distances" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const profilePic = document.querySelectorAll('.profile-pic');
-            if (document.body.classList.contains('dark-mode')) {
-                profilePic.forEach(pic => pic.src = 'photo-night.jpg');
-            } else {
-                profilePic.forEach(pic => pic.src = 'photo.jpg');
-            }
-        }
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --max: 1120px;
+      --radius: 18px;
+      --radius-sm: 14px;
+      --bg: #0b1220;
+      --bg2: #08101c;
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.55);
+      --surface: rgba(255,255,255,0.06);
+      --surface2: rgba(255,255,255,0.10);
+      --border: rgba(255,255,255,0.12);
+      --accent: #5bd6ff;
+      --accent2: #7c5cff;
+      --good: #55f39a;
+      --shadow: 0 22px 60px rgba(0,0,0,0.38);
+      --shadow-soft: 0 12px 30px rgba(0,0,0,0.22);
+      --ring: 0 0 0 3px rgba(91,214,255,0.22);
+      --grid: rgba(255,255,255,0.04);
+    }
+
+    [data-theme="light"]{
+      --bg: #f6f8fc;
+      --bg2: #eef2fb;
+      --text: rgba(14,22,36,0.92);
+      --muted: rgba(14,22,36,0.72);
+      --muted2: rgba(14,22,36,0.56);
+      --surface: rgba(14,22,36,0.06);
+      --surface2: rgba(14,22,36,0.09);
+      --border: rgba(14,22,36,0.12);
+      --accent: #1a73e8;
+      --accent2: #6f2cff;
+      --shadow: 0 22px 60px rgba(14,22,36,0.16);
+      --shadow-soft: 0 12px 30px rgba(14,22,36,0.10);
+      --ring: 0 0 0 3px rgba(26,115,232,0.18);
+      --grid: rgba(14,22,36,0.05);
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 10% -10%, rgba(91,214,255,0.22), transparent 60%),
+        radial-gradient(980px 520px at 92% 8%, rgba(124,92,255,0.18), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(800px 500px at 30% 0%, rgba(0,0,0,0.85), transparent 65%);
+      opacity: .55;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible{
+      outline: none;
+      box-shadow: var(--ring);
+      border-radius: 12px;
+    }
+
+    .container{
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 26px 0 44px;
+      position: relative;
+    }
+
+    .skip{
+      position: absolute;
+      left: -999px;
+      top: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      border-radius: 999px;
+      z-index: 9999;
+    }
+    .skip:focus{ left: 12px; }
+
+    .bar{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0));
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="light"] .bar{
+      background: linear-gradient(to bottom, rgba(246,248,252,0.90), rgba(246,248,252,0.35));
+    }
+
+    .bar-inner{
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+    .brand .mark{
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(91,214,255,0.12);
+    }
+    .brand .name{ display: flex; flex-direction: column; line-height: 1.15; }
+    .brand strong{ font-weight: 800; letter-spacing: -0.03em; }
+    .brand span{ color: var(--muted2); font-size: 0.95rem; font-weight: 600; }
+
+    .bar-right{ display: flex; align-items: center; gap: 10px; }
+
+    .btn{
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 750;
+      transition: transform .14s ease, background .14s ease;
+      user-select: none;
+    }
+    .btn:hover{ transform: translateY(-1px); background: var(--surface2); }
+    .btn:active{ transform: translateY(0); }
+    .btn-primary{ border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
+
+    .hero{
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after{
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background:
+        radial-gradient(800px 360px at 20% 0%, rgba(91,214,255,0.18), transparent 60%),
+        radial-gradient(820px 380px at 92% 10%, rgba(124,92,255,0.16), transparent 55%);
+      pointer-events: none;
+      opacity: .85;
+    }
+    .hero-inner{
+      position: relative;
+      z-index: 2;
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1.45fr 0.85fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    h1{ margin: 0; font-size: clamp(1.9rem, 2.8vw, 2.75rem); line-height: 1.10; letter-spacing: -0.04em; }
+    .subtitle{ margin: 10px 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.35vw, 1.22rem); font-weight: 600; }
+
+    .chips, .tags{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip, .tag, .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .chip{ padding: 8px 12px; font-size: 0.95rem; }
+    .badge.me{ color: var(--text); background: rgba(85,243,154,0.08); }
+    .badge.coauthor{ color: var(--text); background: rgba(124,92,255,0.10); }
+
+    .hero-actions{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .link{
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      font-weight: 800;
+    }
+    .link:hover{ background: rgba(255,255,255,0.08); }
+    .link small{ color: var(--muted2); font-weight: 750; }
+
+    .profile{ display: flex; justify-content: center; align-items: center; }
+    .avatar{
+      width: 156px;
+      height: 156px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      background: rgba(255,255,255,0.05);
+    }
+    .status{ margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+    .status .row{ display: flex; align-items: center; gap: 10px; color: var(--muted); font-weight: 650; }
+    .dot{ width: 10px; height: 10px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 5px rgba(85,243,154,0.15); }
+
+    .toc{ margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .toc a{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: transform .14s ease, background .14s ease, color .14s ease;
+    }
+    .toc a:hover{ transform: translateY(-1px); background: var(--surface); color: var(--text); }
+    .toc a.active{ background: var(--surface2); color: var(--text); }
+
+    main{ margin-top: 18px; }
+    .section{
+      scroll-margin-top: 88px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-soft);
+    }
+    [data-theme="light"] .section{ box-shadow: 0 12px 30px rgba(14,22,36,0.08); }
+    .section h2{ margin: 0 0 10px; font-size: 1.25rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+    .section-intro{ margin: 0 0 12px; color: var(--muted); }
+
+    .muted{ color: var(--muted); }
+    .small{ color: var(--muted2); font-size: 0.95rem; }
+    .grid2{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid3{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card{ border: 1px solid var(--border); background: rgba(255,255,255,0.04); border-radius: var(--radius-sm); padding: 14px; }
+    .card h3{ margin: 0 0 6px; font-size: 1rem; }
+    .card ul{ margin: 8px 0 0; padding-left: 19px; }
+    .card li + li{ margin-top: 4px; }
+
+    .timeline{ display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .titem{
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+    .titem .when{ color: var(--muted2); font-weight: 850; letter-spacing: -0.02em; }
+    .titem .what{ color: var(--muted); }
+    .titem .what strong{ color: var(--text); font-weight: 850; }
+    .titem .actions{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
+
+    .pubs{ display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .pub{ border: 1px solid var(--border); background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 14px; }
+    .pub .top{ display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .pub .title{ font-weight: 900; letter-spacing: -0.02em; }
+    .pub .meta{ color: var(--muted2); font-weight: 700; font-size: 0.95rem; margin-top: 3px; }
+    .pub .actions{ display: flex; gap: 8px; flex-wrap: wrap; }
+    .mini{
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      font-weight: 850;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mini:hover{ background: rgba(255,255,255,0.08); }
+
+    .notice{ margin-top: 12px; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--muted); font-weight: 650; }
+
+    footer{ margin-top: 18px; padding: 26px 0 36px; color: var(--muted2); text-align: center; }
+    .footlinks{ display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+    footer a{ color: var(--muted); font-weight: 850; }
+
+    @media (max-width: 960px){
+      .hero-inner{ grid-template-columns: 1fr; }
+      .profile{ justify-content: flex-start; }
+      .grid3, .grid2{ grid-template-columns: 1fr; }
+      .titem{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px){
+      .bar-inner{ align-items: flex-start; }
+      .brand{ min-width: 0; }
+      .bar-right .btn span{ display: none; }
+      .container, .bar-inner{ width: min(var(--max), calc(100% - 24px)); }
+      .hero-inner{ padding: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .btn, .toc a, .mini{ transition: none; }
+      .btn:hover, .toc a:hover{ transform: none; }
+    }
+    /* ---------- Talks ---------- */
+
+#talks .section-intro{
+  margin: -2px 0 12px;
+  color: var(--muted2);
+  font-size: 0.92rem;
+}
+
+#talks .timeline{
+  gap: 9px;
+}
+
+#talks .titem{
+  padding: 11px 12px;
+}
+
+#talks .what{
+  line-height: 1.45;
+}
+
+#talks .what > strong{
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text);
+  font-weight: 850;
+}
+
+.talk-presenter{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.talk-links{
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.talk-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--muted2);
+  font-size: 0.80rem;
+  font-weight: 700;
+}
+
+.talk-link i{
+  font-size: 0.74rem;
+}
+
+.talk-link:hover{
+  color: var(--accent);
+}
+.teaching-year{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: start;
+}
+
+.teaching-year-label{
+  color: var(--muted2);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  padding-top: 14px;
+}
+
+.teaching-courses{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.course{
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+
+.course-header{
+  padding: 14px;
+}
+
+.course-title{
+  font-weight: 850;
+  color: var(--text);
+}
+
+.course-content{
+  padding: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.course-content-title{
+  margin-bottom: 10px;
+  color: var(--muted2);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.course-topic{
+  padding: 10px 14px;
+  border-left: 2px solid var(--border);
+}
+
+.course-topic h3{
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+}
+
+.course-topic ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 960px){
+  .teaching-year{
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-year-label{
+    padding-top: 0;
+  }
+}
+.person-link{
+  color: color-mix(in srgb, var(--accent) 28%, var(--muted));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 20%, var(--muted2));
+  text-underline-offset: 3px;
+  font-weight: inherit;
+}
+
+.person-link:hover{
+  color: color-mix(in srgb, var(--accent) 45%, var(--muted));
+}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Houssein Mansour",
+    "jobTitle": "PhD Student",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "ISAE-SUPAERO"},
+    "email": "mailto:houssein.mansour@isae-supaero.fr",
+    "address": {"@type": "PostalAddress", "addressLocality": "Toulouse", "addressCountry": "FR"},
+    "sameAs": ["https://www.linkedin.com/in/houssein-mansour-b50899212"]
+  }
+  </script>
 </head>
 
 <body>
-    <header>
-        <div class="lang-buttons">
-            <button onclick="switchLanguage('fr')">Fr</button>
-            <button onclick="switchLanguage('en')">En</button>
-            <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="bar" role="banner">
+    <div class="bar-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="mark" aria-hidden="true"></span>
+        <div class="name">
+          <strong>Houssein Mansour</strong>
+          <span>PhD @ ISAE-SUPAERO</span>
         </div>
-        <h1>Houssein Mansour</h1>
-        <h2>Assistant de recherche</h2>
+      </a>
+
+      <div class="bar-right" role="group" aria-label="Site actions">
+        <button class="btn btn-primary" type="button" id="themeBtn" title="Toggle theme">
+          <i id="themeIcon" class="fa-solid fa-sun" aria-hidden="true"></i><span>Theme</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" class="container">
+    <header class="hero" aria-label="Introduction">
+      <div class="hero-inner">
+        <div>
+          <h1>Houssein Mansour</h1>
+          <p class="subtitle">PhD student in Computer Science at <strong>ISAE-SUPAERO, Université de Toulouse</strong>.</p>
+
+          <div class="chips" aria-label="Research highlights">
+            <span class="chip"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Probabilistic Programming</span>
+            <span class="chip"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Program Semantics</span>
+            <span class="chip"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hybrid Systems</span>
+          </div>
+
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="link" href="mailto:houssein.mansour@isae-supaero.fr">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Email
+              <small>houssein.mansour@isae-supaero.fr</small>
+            </a>
+            <a class="link" href="https://www.linkedin.com/in/houssein-mansour-b50899212" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+            <img class="avatar" src="photo.jpg" alt="Portrait of Houssein Mansour" />
+            <div class="status" aria-label="Status">
+              <div class="row"><span class="dot" aria-hidden="true"></span> Open to research collaborations</div>
+              <div class="row"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> ISAE-SUPAERO • Toulouse</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main>
-        <!-- Contenu en français -->
-        <div id="fr" class="content active">
-            <nav>
-                <a href="#home-fr">Accueil</a>
-                <a href="#current-role-fr">Poste Actuel</a>
-                <a href="#education-fr">Éducation</a>
-                <a href="#projects-fr">Projets et Stages</a>
-                <a href="#publications-fr">Publications</a>
-                <a href="#experience-fr">Expérience</a>
-                <a href="#skills-fr">Compétences</a>
-                <a href="#interests-fr">Centres d'intérêt</a>
-            </nav>
+    <nav class="toc" aria-label="Table of contents">
+      <a href="#about">About & Research</a>
+      <a href="#experience">Research Experience</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
+      <a href="#service">Service</a>
+      <a href="#skills">Skills</a>
+    </nav>
 
-            <div class="container">
-                <section id="home-fr" class="content-section welcome-section">
-                    <div class="welcome-text">
-                        <h3>Bienvenue sur ma page personnelle</h3>
-                        <p>Je suis Houssein Mansour, assistant de recherche à l'Université de Bologne.</p>
-                        <p>Adresse: 13009, Marseille, France</p>
-                        <p>Contact: <a href="mailto:houssein.mansour@etu.univ-amu.fr" style="color: #1a73e8;">houssein.mansour@etu.univ-amu.fr</a> | Téléphone: +33 7 74 54 68 56</p>
-                    </div>
-                    <img src="photo.jpg" alt="Photo de Houssein Mansour" class="profile-pic">
-                </section>
+    <main id="content" role="main"><section id="about" class="section" data-section>
+  <h2>
+    <i class="fa-solid fa-user" aria-hidden="true"></i>
+    About & Research
+  </h2>
 
-                <section id="current-role-fr" class="content-section">
-                    <h3>Poste Actuel</h3>
-                    <p>Depuis octobre 2024, j'occupe un poste d'assistant de recherche à l'Université de Bologne en Italie, sous la supervision de Ugo Dal Lago, et de Raphaëlle Crubillé à l'Université Aix-Marseille (LIS) en informatique théorique et mathématiques discrètes. Je me concentre particulièrement sur le <i>calcul lambda probabiliste, la sémantique des langages de programmation probabilistes...</i></p>
-                </section>
+  <!-- Short introduction -->
+  <div class="card">
+    <p class="muted" style="margin:0;">
+      I am a PhD student in Computer Science at <strong>ISAE-SUPAERO</strong>.
+      My research lies at the intersection of
+      <strong>probabilistic programming</strong>,
+      <strong>program semantics</strong>, and
+      <strong>Bayesian inference</strong>.
+    </p>
+   <p class="muted" style="margin-bottom:0;">
+  Advisors:
 
-                <section id="education-fr" class="content-section">
-                    <h3>Éducation</h3>
-                    <ul>
-                        <li>2023 – 2024: Master 2 Informatique et Mathématique Discrète (IMD), à l’université d’Aix-Marseille, avec une moyenne de 14/20, mention Bien.</li>
-                        <li>2022 – 2023: Master 1 Mathématiques et Applications, parcours Informatique et Mathématique Discrète (IMD).</li>
-                        <li>2019 – 2022: Licence en mathématiques, à l’Université Libanaise.</li>
-                        <li>2018 – 2019: Diplôme de secondaire générale, série: sciences générales, au lycée officiel du Mousa et Ismail Abbas (Bint-Jbeil). </li>
-                    </ul>
-                </section>
+  <a class="person-link"
+     href="https://www.lip6.fr/Christine.Tasson/body.php?cat=accueil"
+     target="_blank"
+     rel="noopener noreferrer">
+    Christine Tasson
+  </a>,
 
-                <section id="projects-fr" class="content-section">
-                    <h3>Projets et Stages</h3>
-                    <ul>
-                        <li>2023 – 2024: Stage de Master 2 IMD sous la supervision de <a href="https://research.crubille.lautre.net/" class="supervisor">Raphaëlle Crubillé</a>, intitulé "Amplification de la Distance Contextuelle dans les Langages de programmation probabilistes d’ordre supérieur". [<a href="résumé-stage-m2.pdf" target="_blank" class="report-link">résumé</a>|<a href="report-m2.pdf" target="_blank" class="report-link">rapport</a>|<a href="soutenance-m2.pdf" target="_blank" class="report-link">slides</a>]</li>
-                        <li>2022-2023: Travail d’études et de recherche en deuxième semestre du Master 1 MAAP sous la supervision de <a href="https://www.i2m.univ-amu.fr/perso/laurent.regnier/" class="supervisor">Laurent Regnier</a> intitulé "L’escalier glissant du diable" portant sur la fonction point d’interrogation de Minkowski et ses propriétés. [<a href="report-m1.pdf" target="_blank" class="report-link">rapport</a>|<a href="soutenance-m1.pdf" target="_blank" class="report-link">slides</a>]</li>
-                        <li>2021 – 2022: Responsable du club scientifique de mathématiques et d’informatique à l’Université Libanaise FS5, chargé d’organiser des activités liées aux mathématiques et à l’informatique pour les étudiants de ce domaine.</li>
-                    </ul>
-                </section>
+  <a class="person-link"
+     href="https://pagespro.isae-supaero.fr/xavier-thirioux/"
+     target="_blank"
+     rel="noopener noreferrer">
+    Xavier Thirioux
+  </a>,
 
-                <section id="publications-fr" class="content-section">
-                    <h3>Publications</h3>
-                    <h4 class="workshop-title">Publications dans des workshops</h4>
-                    <ul>
-                        <li><a href="https://icfp24.sigplan.org/details/hope-2024-papers/2/Amplifying-Contextual-Distance-in-Higher-Order-Languages-using-the-Law-of-Large-Numb" target="_blank" class="publication">Amplification de la distance contextuelle dans les langages d'ordre supérieur en utilisant la loi des grands nombres.</a> Raphaelle Crubillé, Houssein Mansour. HOPE 2024 - ICFP 2024. [<a href="hope.pdf" target="_blank" class="report-link">hope</a>] </li>
-                    </ul>
-                </section>
+  and
 
-                <section id="experience-fr" class="content-section">
-                    <h3>Expérience Professionnelle</h3>
-                    <ul>
-                        <li>Depuis 2019: Cours particuliers en mathématiques pour lycéens et étudiants universitaires.</li>
-                        <li>2022 – 2023: Tutorat de maths à l’université d’Aix-Marseille.</li>
-                        <li>2021: Enseignement à distance aux étudiants de première année à l’université, portant sur les sujets d’intégration et de séries numériques. Cette formation a été dispensée via l’application Google Classroom, et elle a attiré la participation de 98 étudiants.</li>
-                    </ul>
-                </section>
+  <a class="person-link"
+     href="https://research.crubille.lautre.net/"
+     target="_blank"
+     rel="noopener noreferrer">
+    Raphaëlle Crubillé
+  </a>.
+</p>
+  </div>
 
-                <section id="skills-fr" class="content-section">
-                    <h3>Compétences</h3>
-                    <ul>
-                        <li>Langues: Français (très bien), Anglais (bien), Arabe (langue maternelle).</li>
-                        <li>Logiciels: C++, Python, Matlab et Octave, Maple.</li>
-                        <li>Outils: Microsoft Word, Excel, Power Point, LATEX.</li>
-                    </ul>
-                </section>
+<!-- Research projects -->
+<div class="grid2" style="margin-top:14px;">
 
-                <section id="interests-fr" class="content-section">
-                    <h3>Centres d'intérêt</h3>
-                    <ul>
-                        <li>Logique, lambda calcul, automates, algorithmique, combinatoire, théorie des graphes, méthodes formelles, théorie des langages de programmation, cryptographie.</li>
-                        <li>Lecture des livres de théorie de mathématiques et découverte des mathématiques profondes.</li>
-                        <li>Histoire des mathématiques et des mathématiciens.</li>
-                        <li>Programmation en général et programmation utilisée en mathématiques en particulier.</li>
-                    </ul>
-                </section>
-            </div>
+  <!-- Project 1 -->
+  <div class="card">
+    <h3 style="margin-top:0;">
+      <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+      Bayesian Inference for Hybrid Models
+    </h3>
+<p class="muted">
+  <strong>Probabilistic programs</strong> define probability distributions. We study how these distributions can be represented
+    and <strong>approximated</strong> algorithmically, especially when conditioning on observations
+    makes exact inference difficult.
+</p>
+
+<p class="muted" style="margin-bottom:0;">
+  We are particularly interested in models combining
+  <strong>discrete and continuous dynamics</strong>.
+</p>
+  </div>
+
+
+  <!-- Project 2 -->
+  <div class="card">
+    <h3 style="margin-top:0;">
+      <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+      Contextual Distances in Randomized Programming
+    </h3>
+
+    <p class="muted">
+  <strong>Contextual distance</strong> measures how well two randomized programs
+  can be distinguished by program contexts. When contexts can copy
+  their argument, small differences can be amplified.
+</p>
+
+<p class="muted" style="margin-bottom:0;">
+  Our work gives a probabilistic proof of this phenomenon and derives <strong>lower bounds</strong>
+  for contextual distances when copying is restricted.
+</p>
+  </div>
+
+</div>
+
+  <!-- Research focus -->
+  <div class="card" style="margin-top:14px;">
+    <h3 style="margin-top:0;">Research Focus</h3>
+
+    <div class="tags" aria-label="Research interests">
+      <span class="tag">PPL Semantics</span>
+      <span class="tag">Bayesian Inference</span>
+      <span class="tag">Hybrid Systems</span>
+      <span class="tag">Trajectory Inference</span>
+      <span class="tag">Contextual Distance</span>
+      <span class="tag">Lambda Calculus</span>
+    </div>
+  </div>
+</section>
+      
+
+
+
+
+
+
+<section id="experience" class="section" data-section>
+  <h2>
+    <i class="fa-solid fa-flask" aria-hidden="true"></i>
+    Research Experience
+  </h2>
+
+  <div class="timeline" aria-label="Research experience timeline">
+
+    <!-- Research Assistant -->
+    <div class="titem">
+      <div class="when">Dec 2024 – Jul 2025</div>
+
+      <div class="what">
+        <strong>
+          Research Assistant — Aix-Marseille Université & University of Bologna
+        </strong>
+
+        <div class="small">
+          Research work with 
+          <a class="person-link"
+             href="https://research.crubille.lautre.net/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Raphaëlle Crubillé
+          </a>
+          and 
+          <a class="person-link"
+             href="https://udallago.github.io/"
+             target="_blank"
+             rel="noopener noreferrer">
+           Ugo Dal Lago
+          </a>
+          on contextual distances between higher-order probabilistic programs.
+        </div>
+      </div>
+    </div>
+
+<!-- M2 Internship -->
+<div class="titem">
+  <div class="when">2023 – 2024</div>
+
+  <div class="what">
+    <strong>
+      M2 Research Internship — Aix-Marseille Université
+    </strong>
+
+    <div class="small">
+      As part of the MSc in Computer Science & Discrete Mathematics (IMD).
+      Supervised by
+      <a class="person-link"
+         href="https://research.crubille.lautre.net/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Raphaëlle Crubillé
+      </a>.
+      <em>
+        Amplification of Contextual Distance in Higher-Order
+        Probabilistic Programming Languages.
+      </em>
+    </div>
+  </div>
+</div>
+
+
+<!-- M1 Research Project -->
+<div class="titem">
+  <div class="when">2022 – 2023</div>
+
+  <div class="what">
+    <strong>
+      M1 Research Project — Aix-Marseille Université
+    </strong>
+
+    <div class="small">
+      As part of the MSc in Mathematics & Applications (MAAP).
+      Supervised by
+      <a class="person-link"
+         href="https://www.i2m.univ-amu.fr/perso/laurent.regnier/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Laurent Regnier
+      </a>.
+      <em>“L’escalier glissant du diable”</em> — a study of
+      Minkowski's question-mark function and its properties.
+    </div>
+  </div>
+</div>
+    
+    
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section id="talks" class="section" data-section>
+
+  <h2>
+    <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+    Talks
+  </h2>
+
+  <p class="section-intro">
+    Workshop presentations related to my research. Presenter underlined.
+  </p>
+
+  <div class="timeline" aria-label="Talks timeline">
+
+
+    <!-- LAFI 2026 -->
+    <div class="titem">
+      <div class="when">LAFI 2026</div>
+
+      <div class="what">
+        <strong>
+          On Contextual Distances in Randomized Programming:
+          Amplification and Lower Bounds
+        </strong>
+
+        <div class="small">
+          <span class="talk-presenter">Houssein Mansour</span>
+          & Raphaëlle Crubillé · LAFI @ POPL 2026
         </div>
 
-        <!-- Contenu en anglais -->
-        <div id="en" class="content">
-            <nav>
-                <a href="#home-en">Home</a>
-                <a href="#current-role-en">Current Position</a>
-                <a href="#education-en">Education</a>
-                <a href="#projects-en">Projects and Internships</a>
-                <a href="#publications-en">Publications</a>
-                <a href="#experience-en">Experience</a>
-                <a href="#skills-en">Skills</a>
-                <a href="#interests-en">Interests</a>
-            </nav>
-
-            <div class="container">
-                <section id="home-en" class="content-section welcome-section">
-                    <div class="welcome-text">
-                        <h3>Welcome to my personal page</h3>
-                        <p>I am Houssein Mansour, a research assistant at the University of Bologna.</p>
-                        <p>Address: 13009, Marseille, France</p>
-                        <p>Contact: <a href="mailto:houssein.mansour@etu.univ-amu.fr" style="color: #1a73e8;">houssein.mansour@etu.univ-amu.fr</a> | Phone: +33 7 74 54 68 56</p>
-                    </div>
-                    <img src="photo.jpg" alt="Photo of Houssein Mansour" class="profile-pic">
-                </section>
-
-                <section id="current-role-en" class="content-section">
-                    <h3>Current Position</h3>
-                    <p>Since October 2024, I have been serving as a research assistant at the University of Bologna in Italy, supervised by Ugo Dal Lago, and Raphaëlle Crubillé at Aix-Marseille University (LIS) in theoretical computer science and discrete mathematics. My focus is particularly on <i>probabilistic lambda calculus, semantics of probabilistic programming languages...</i></p>
-                </section>
-
-                <section id="education-en" class="content-section">
-                    <h3>Education</h3>
-                    <ul>
-                        <li>2023 – 2024: Master 2 in Computer Science and Discrete Mathematics (IMD) at Aix-Marseille University, with an average of 14/20, honors.</li>
-                        <li>2022 – 2023: Master 1 in Mathematics and Applications, Discrete Mathematics and Computer Science (IMD) program, at Aix-Marseille University.</li>
-                        <li>2019 – 2022: Bachelor's degree in Mathematics at the Lebanese University.</li>
-                        <li>2018 – 2019: General secondary school diploma, General Sciences series, at Mousa and Ismail Abbas Official High School (Bint-Jbeil).</li>
-                    </ul>
-                </section>
-
-                <section id="projects-en" class="content-section">
-                    <h3>Projects and Internships</h3>
-                    <ul>
-                        <li>2023 – 2024: Master 2 IMD internship under the supervision of <a href="https://research.crubille.lautre.net/" class="supervisor">Raphaëlle Crubillé</a>, entitled "Amplification of Contextual Distance in Higher-Order Probabilistic Programming Languages". [<a href="report-m2.pdf" target="_blank" class="report-link">report (in french)</a>]</li>
-                        <li>2022-2023: Study and research work in the second semester of Master 1 MAAP under the supervision of <a href="https://www.i2m.univ-amu.fr/perso/laurent.regnier/" class="supervisor">Laurent Regnier</a>, entitled "The Devil's Slippery Staircase" on the Minkowski question mark function and its properties. [<a href="report-m1.pdf" target="_blank" class="report-link">report (in french)</a>]</li>
-                        <li>2021 – 2022: Head of the mathematics and computer science scientific club at the Lebanese University FS5, responsible for organizing activities related to mathematics and computer science for students in this field.</li>
-                    </ul>
-                </section>
-
-                <section id="publications-en" class="content-section">
-                    <h3>Publications</h3>
-                    <h4 class="workshop-title">Publications in a Workshop</h4>
-                    <ul>
-                        <li><a href="https://icfp24.sigplan.org/details/hope-2024-papers/2/Amplifying-Contextual-Distance-in-Higher-Order-Languages-using-the-Law-of-Large-Numb" target="_blank" class="publication">Amplifying Contextual Distance in Higher-Order Languages using the Law of Large Numbers</a>. Raphaelle Crubillé, Houssein Mansour. HOPE 2024 - ICFP 2024. [<a href="hope.pdf" target="_blank" class="report-link">hope</a>]</li>
-                    </ul>
-                </section>
-
-                <section id="experience-en" class="content-section">
-                    <h3>Professional Experience</h3>
-                    <ul>
-                        <li>Since 2019: Private tutoring in mathematics for high school and university students.</li>
-                        <li>2022 – 2023: Math tutoring at Aix-Marseille University.</li>
-                        <li>2021: Distance teaching for first-year university students on the subjects of integration and numerical series. This training was provided via Google Classroom and attracted the participation of 98 students.</li>
-                    </ul>
-                </section>
-
-                <section id="skills-en" class="content-section">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Languages: French (very good), English (good), Arabic (native).</li>
-                        <li>Software: C++, Python, Matlab and Octave, Maple.</li>
-                        <li>Tools: Microsoft Word, Excel, Power Point, LATEX.</li>
-                    </ul>
-                </section>
-
-                <section id="interests-en" class="content-section">
-                    <h3>Interests</h3>
-                    <ul>
-                        <li>Logic, lambda calculus, automata, algorithmics, combinatorics, graph theory, formal methods, programming language theory, cryptography.</li>
-                        <li>Reading books on mathematical theory and discovering deep mathematics.</li>
-                        <li>History of mathematics and mathematicians.</li>
-                        <li>Programming in general and programming used in mathematics in particular.</li>
-                    </ul>
-                </section>
-            </div>
+        <div class="talk-links">
+          <a
+            class="talk-link"
+            href="https://popl26.sigplan.org/details/lafi-2026-papers/7/On-Contextual-Distances-in-Randomized-Programming-Amplification-and-Lower-Bounds"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Details
+          </a>
         </div>
+      </div>
+    </div>
+
+
+    <!-- TLLA 2025 -->
+    <div class="titem">
+      <div class="when">TLLA 2025</div>
+
+      <div class="what">
+        <strong>
+          Amplification Rate of Contextual Distances in Randomised Programming
+        </strong>
+
+        <div class="small">
+          <span class="talk-presenter">Houssein Mansour</span>
+          & Raphaëlle Crubillé ·
+          9th International Workshop on Trends in Linear Logic and Applications
+        </div>
+
+        <div class="talk-links">
+          <a
+            class="talk-link"
+            href="https://lipn.univ-paris13.fr/TLLA/2025/abstracts/03-mansour-crubille.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-regular fa-file-pdf"></i>
+            Abstract
+          </a>
+
+          <a
+            class="talk-link"
+            href="https://lipn.univ-paris13.fr/TLLA/2025/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- HOPR 2025 -->
+    <div class="titem">
+      <div class="when">HOPR 2025</div>
+
+      <div class="what">
+        <strong>
+          Amplification Rate of Contextual Distances in Randomised Programming
+        </strong>
+
+        <div class="small">
+          <span class="talk-presenter">Houssein Mansour</span>
+          & Raphaëlle Crubillé · HOPR 2025
+        </div>
+      </div>
+    </div>
+
+
+    <!-- HOPE 2024 -->
+    <div class="titem">
+      <div class="when">HOPE 2024</div>
+
+      <div class="what">
+        <strong>
+          Amplifying Contextual Distance in Higher-Order Languages,
+          using the Law of Large Numbers
+        </strong>
+
+        <div class="small">
+          Houssein Mansour & <span class="talk-presenter">Raphaëlle Crubillé</span> · HOPE @ ICFP 2024
+
+        <div class="talk-links">
+          <a
+            class="talk-link"
+            href="https://icfp24.sigplan.org/details/hope-2024-papers/2/Amplifying-Contextual-Distance-in-Higher-Order-Languages-using-the-Law-of-Large-Numb"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="teaching" class="section" data-section>
+  <h2>
+    <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>
+    Teaching
+  </h2>
+
+  <!-- 2026–2027 
+  <div class="teaching-year">
+    <div class="teaching-year-label">2026–2027</div>
+
+    <div class="teaching-courses">
+
+      <div class="course">
+        <div class="course-header">
+          <div>
+            <div class="course-title">Course Title 1</div>
+            <div class="small">ISAE-SUPAERO</div>
+          </div>
+        </div>
+
+        <div class="course-content">
+          <div class="course-content-title">Practical session topics</div>
+
+        </div>
+      </div>
+
+      <div class="course">
+        <div class="course-header">
+          <div>
+            <div class="course-title">Course Title 2</div>
+            <div class="small">ISAE-SUPAERO</div>
+          </div>
+        </div>
+
+        <div class="course-content">
+          <div class="course-content-title">Practical session topics</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+-->
+
+  <!-- 2025–2026 -->
+  <div class="teaching-year">
+    <div class="teaching-year-label">2025–2026</div>
+
+    <div class="teaching-courses">
+
+      <div class="course">
+        <div class="course-header">
+          <div>
+            <div class="course-title">
+              OCaml Practical Sessions (TP)
+            </div>
+            <div class="small">ISAE-SUPAERO</div>
+          </div>
+        </div>
+
+        <div class="course-content">
+          <div class="course-content-title">
+            Practical session topics
+          </div>
+
+          <div class="grid3">
+
+            <div class="course-topic">
+              <h3>Algorithms, Lists & Sorting</h3>
+              <ul class="muted">
+                <li>Introduction to algorithms and OCaml</li>
+                <li>Mathematical expressions in OCaml</li>
+                <li>Algorithm analysis and proofs</li>
+                <li>Finding aligned points in a noisy image</li>
+                <li>Abstract Data Types and lists</li>
+                <li>Sorting algorithms</li>
+              </ul>
+            </div>
+
+            <div class="course-topic">
+              <h3>MapReduce & Memoization</h3>
+              <ul class="muted">
+                <li>MapReduce</li>
+                <li>A spell checker application</li>
+                <li>Distance: memoization and pruning</li>
+              </ul>
+            </div>
+
+            <div class="course-topic">
+              <h3>Sieve & Sat </h3>
+              <ul class="muted">
+                <li>Sieve </li>
+                <li>Mastermind project</li>
+                <li>Logical modeling</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- AMU tutoring -->
+
+
+  <!-- 2025–2026 -->
+  <div class="teaching-year">
+    <div class="teaching-year-label">2022–2023</div>
+
+    <div class="teaching-courses">
+
+      <div class="course">
+        <div class="course-header">
+          <div>
+            <div class="course-title">
+              Mathematics Tutor
+            </div>
+            <div class="small">Aix-Marseille Université</div>
+          </div>
+        </div>
+
+        <div class="course-content">
+          <div class="course-content-title">
+           Tutorial sessions and guided exercises in mathematics. 
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+<!--
+      <section id="outputs" class="section" data-section>
+        <h2><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Workshop Contributions</h2>
+        <p class="section-intro">I use this section instead of “Publications” for now, so the site distinguishes workshop contributions and abstracts from archival journal/conference papers.</p>
+
+        <div class="pubs" aria-label="Workshop contributions list">
+          <article class="pub">
+            <div class="top">
+              <div>
+                <div class="title">On Contextual Distances in Randomized Programming: Amplification and Lower Bounds</div>
+                <div class="meta">Houssein Mansour, Raphaëlle Crubillé · LAFI 2026 @ POPL 2026 · Workshop contribution</div>
+              </div>
+              <div class="actions">
+                <a class="mini" href="https://popl26.sigplan.org/details/lafi-2026-papers/7/On-Contextual-Distances-in-Randomized-Programming-Amplification-and-Lower-Bounds" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="top">
+              <div>
+                <div class="title">Amplification Rate of Contextual Distances in Randomised Programming</div>
+                <div class="meta">Houssein Mansour, Raphaëlle Crubillé · TLLA 2025 · Workshop abstract</div>
+              </div>
+              <div class="actions">
+                <a class="mini" href="https://lipn.univ-paris13.fr/TLLA/2025/abstracts/03-mansour-crubille.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Abstract</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="top">
+              <div>
+                <div class="title">Amplifying Contextual Distance in Higher-Order Languages, using the Law of Large Numbers</div>
+                <div class="meta">Raphaëlle Crubillé, Houssein Mansour · HOPE 2024 @ ICFP 2024 · Workshop talk contribution</div>
+              </div>
+              <div class="actions">
+                <a class="mini" href="https://icfp24.sigplan.org/details/hope-2024-papers/2/Amplifying-Contextual-Distance-in-Higher-Order-Languages-using-the-Law-of-Large-Numb" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    -->
+   
+
+
+
+
+
+
+<section id="education" class="section" data-section>
+  <h2>
+    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+    Education
+  </h2>
+
+  <div class="timeline" aria-label="Education timeline">
+
+    <!-- PhD -->
+    <div class="titem">
+      <div class="when">2025 – Present</div>
+      <div class="what">
+        <strong>PhD in Computer Science</strong> — ISAE-SUPAERO, Université de Toulouse
+      </div>
+    </div>
+
+    <!-- M2 -->
+    <div class="titem">
+      <div class="when">2023 – 2024</div>
+      <div class="what">
+        <strong>MSc (M2) — Computer Science & Discrete Mathematics (IMD)</strong>
+        — Aix-Marseille Université
+
+        <div class="small">
+          Recipient of the TIGER Excellence Scholarship.
+        </div>
+      </div>
+    </div>
+
+    <!-- M1 -->
+    <div class="titem">
+      <div class="when">2022 – 2023</div>
+      <div class="what">
+        <strong>MSc (M1) — Mathematics & Applications</strong>
+        — Aix-Marseille Université
+
+        <div class="small">
+          Recipient of the TIGER Excellence Scholarship.
+        </div>
+      </div>
+    </div>
+
+    <!-- Bachelor -->
+    <div class="titem">
+      <div class="when">2019 – 2022</div>
+      <div class="what">
+        <strong>BSc — Mathematics</strong> — Lebanese University
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+      <section id="service" class="section" data-section>
+        <h2><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>  Service</h2>
+        <div class="timeline">
+          <div class="titem">
+            <div class="when">POPL 2026</div>
+            <div class="what">
+              <strong>Student Volunteer — ACM SIGPLAN Symposium on Principles of Programming Languages</strong>
+              <div class="small">Rennes, France · January 2026</div>
+              <div class="actions">
+                <a class="mini" href="https://popl26.sigplan.org/committee/POPL-2026-student-volunteers" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Official volunteer list</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+     <section id="skills" class="section" data-section>
+  <h2>
+    <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+    Skills
+  </h2>
+
+  <div class="grid3">
+
+    <!-- Programming -->
+    <div class="card">
+      <h3>Programming</h3>
+
+      <div class="tags">
+        <span class="tag">OCaml</span>
+        <span class="tag">Lustre</span>
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+      </div>
+    </div>
+
+    <!-- Scientific tools -->
+    <div class="card">
+      <h3>Scientific Tools</h3>
+
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">LaTeX</span>
+        <span class="tag">MATLAB / Octave</span>
+        <span class="tag">Maple</span>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="card">
+      <h3>Spoken Languages</h3>
+
+      <div class="tags">
+        <span class="tag">French</span>
+        <span class="tag">English</span>
+        <span class="tag">Arabic</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="mailto:houssein.mansour@etu.univ-amu.fr" style="color: #e60000;">Contact</a> |
-            <a href="https://www.linkedin.com/in/houssein-mansour-b50899212" target="_blank" style="color: #e60000;">LinkedIn</a> |
-            <span>Adresse: 13009, Marseille, France</span>
-        </div>
-        <p>© 2024 Houssein Mansour. Tous droits réservés.</p>
+    <footer aria-label="Footer">
+      <div class="footlinks">
+        <a href="mailto:houssein.mansour@isae-supaero.fr"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+        <a href="https://www.linkedin.com/in/houssein-mansour-b50899212" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a href="#top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Top</a>
+      </div>
+      <div class="small">© <span id="year"></span> Houssein Mansour</div>
     </footer>
+  </div>
+
+  <script>
+    const LS_THEME = "hm_theme";
+    const EMAIL = "houssein.mansour@isae-supaero.fr";
+
+    const themeIcon = document.getElementById("themeIcon");
+    const themeBtn = document.getElementById("themeBtn");
+    const copyEmailBtn = document.getElementById("copyEmailBtn");
+    const tocLinks = Array.from(document.querySelectorAll(".toc a"));
+    const sections = Array.from(document.querySelectorAll("[data-section]"));
+
+    function setTheme(theme){
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem(LS_THEME, theme);
+      if(themeIcon){
+        themeIcon.className = theme === "light" ? "fa-solid fa-moon" : "fa-solid fa-sun";
+      }
+    }
+
+    function toggleTheme(){
+      const current = document.documentElement.getAttribute("data-theme") || "dark";
+      setTheme(current === "dark" ? "light" : "dark");
+    }
+
+    function updateActiveToc(){
+      const y = window.scrollY + 120;
+      let activeId = sections[0]?.id;
+      for(const section of sections){
+        if(section.offsetTop <= y) activeId = section.id;
+      }
+      tocLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + activeId);
+      });
+    }
+
+    async function copyEmail(){
+      try{
+        await navigator.clipboard.writeText(EMAIL);
+        const old = copyEmailBtn.innerHTML;
+        copyEmailBtn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i><span>Copied</span>';
+        setTimeout(() => { copyEmailBtn.innerHTML = old; }, 1400);
+      }catch{
+        window.location.href = "mailto:" + EMAIL;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem(LS_THEME);
+      if(savedTheme === "light" || savedTheme === "dark"){
+        setTheme(savedTheme);
+      }else{
+        const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+        setTheme(prefersLight ? "light" : "dark");
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+      updateActiveToc();
+      window.addEventListener("scroll", updateActiveToc, { passive: true });
+      themeBtn?.addEventListener("click", toggleTheme);
+      copyEmailBtn?.addEventListener("click", copyEmail);
+    });
+  </script>
 </body>
 </html>
