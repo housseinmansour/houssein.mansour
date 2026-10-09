@@ -497,7 +497,7 @@
     "@type": "Person",
     "name": "Houssein Mansour",
     "jobTitle": "PhD Student",
-    "affiliation": {"@type": "CollegeOrUniversity", "name": "ISAE-SUPAERO"},
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "ISAE-SUPAERO" , "url": "https://www.isae-supaero.fr/"},
     "email": "mailto:houssein.mansour@isae-supaero.fr",
     "address": {"@type": "PostalAddress", "addressLocality": "Toulouse", "addressCountry": "FR"},
     "sameAs": ["https://www.linkedin.com/in/houssein-mansour-b50899212"]
@@ -544,7 +544,13 @@
       <div class="hero-inner">
         <div>
           <h1>Houssein Mansour</h1>
-          <p class="subtitle">PhD student in Computer Science at <strong>ISAE-SUPAERO, Université de Toulouse</strong>.</p>
+          <p class="subtitle">PhD Student in Computer Science at
+             <a href="https://www.isae-supaero.fr/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="person-link">
+                     ISAE-SUPAERO
+                       </a></p>
 
           <div class="chips" aria-label="Research highlights">
             <span class="chip"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Probabilistic Programming</span>
@@ -565,7 +571,7 @@
 
         <div class="profile">
           <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
-            <img class="avatar" src="photo.jpg" alt="Portrait of Houssein Mansour" />
+            <img class="avatar" src="assets/images/photo.jpg" alt="Portrait of Houssein Mansour" />
             <div class="status" aria-label="Status">
               <div class="row"><span class="dot" aria-hidden="true"></span> Open to research collaborations</div>
               <div class="row"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> ISAE-SUPAERO • Toulouse</div>
@@ -788,10 +794,6 @@
 
 
 
-
-
-
-
 <section id="talks" class="section" data-section>
 
   <h2>
@@ -800,10 +802,40 @@
   </h2>
 
   <p class="section-intro">
-    Workshop presentations related to my research. Presenter underlined.
+    Selected research talks and presentations.
+    Presenter underlined.
   </p>
 
   <div class="timeline" aria-label="Talks timeline">
+
+    <!-- ALPS 2026 -->
+    <div class="titem">
+      <div class="when">ALPS 2026</div>
+
+      <div class="what">
+        <strong>
+          How different are two probabilistic programs?
+        </strong>
+
+        <div class="small">
+          <span class="talk-presenter">Houssein Mansour</span>
+          &amp; Raphaëlle Crubillé
+          · ALPS Joint Seminar
+          (CASC, ISAE-SUPAERO &amp; II, ENAC)
+        </div>
+
+        <div class="talk-links">
+          <a
+            class="talk-link"
+            href="assets/slides/ALPS_2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
+            Slides
+          </a>
+        </div>
+      </div>
+    </div>
 
 
     <!-- LAFI 2026 -->
@@ -818,7 +850,9 @@
 
         <div class="small">
           <span class="talk-presenter">Houssein Mansour</span>
-          & Raphaëlle Crubillé · LAFI @ POPL 2026
+          &amp; Raphaëlle Crubillé
+          · Languages for Inference (LAFI)
+          Workshop @ Co-located with the POPL 2026 conference
         </div>
 
         <div class="talk-links">
@@ -827,7 +861,7 @@
             href="https://popl26.sigplan.org/details/lafi-2026-papers/7/On-Contextual-Distances-in-Randomized-Programming-Amplification-and-Lower-Bounds"
             target="_blank"
             rel="noopener noreferrer">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             Details
           </a>
         </div>
@@ -841,13 +875,16 @@
 
       <div class="what">
         <strong>
-          Amplification Rate of Contextual Distances in Randomised Programming
+          Amplification Rate of Contextual Distances
+          in Randomised Programming
         </strong>
 
         <div class="small">
           <span class="talk-presenter">Houssein Mansour</span>
-          & Raphaëlle Crubillé ·
-          9th International Workshop on Trends in Linear Logic and Applications
+          &amp; Raphaëlle Crubillé
+          · 9th International Workshop on Trends in
+          Linear Logic and Applications (TLLA)
+          @ Affiliated with the FSCD 2025 conference
         </div>
 
         <div class="talk-links">
@@ -856,7 +893,7 @@
             href="https://lipn.univ-paris13.fr/TLLA/2025/abstracts/03-mansour-crubille.pdf"
             target="_blank"
             rel="noopener noreferrer">
-            <i class="fa-regular fa-file-pdf"></i>
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
             Abstract
           </a>
 
@@ -865,7 +902,7 @@
             href="https://lipn.univ-paris13.fr/TLLA/2025/"
             target="_blank"
             rel="noopener noreferrer">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             Details
           </a>
         </div>
@@ -879,12 +916,27 @@
 
       <div class="what">
         <strong>
-           Amplifying Contextual Distance in Probabilistic Higher-Order Programming Languages
+          Amplifying Contextual Distance in Probabilistic
+          Higher-Order Programming Languages
         </strong>
 
         <div class="small">
           <span class="talk-presenter">Houssein Mansour</span>
-          & Raphaëlle Crubillé · HOPR 2025
+          &amp; Raphaëlle Crubillé
+          · Kick-off Meeting of the ANR Project HOPR
+          (Higher-Order Probabilistic and
+          Resource-aware Reasoning)
+        </div>
+
+        <div class="talk-links">
+          <a
+            class="talk-link"
+            href="https://anr.fr/Project-ANR-24-CE48-5521"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            Project
+          </a>
         </div>
       </div>
     </div>
@@ -896,12 +948,17 @@
 
       <div class="what">
         <strong>
-          Amplifying Contextual Distance in Higher-Order Languages,
-          using the Law of Large Numbers
+          Amplifying Contextual Distance in Higher-Order
+          Languages, using the Law of Large Numbers
         </strong>
 
         <div class="small">
-          Houssein Mansour & <span class="talk-presenter">Raphaëlle Crubillé</span> · HOPE @ ICFP 2024
+          Houssein Mansour &amp;
+          <span class="talk-presenter">Raphaëlle Crubillé</span>
+          · 12th ACM SIGPLAN Workshop on
+          Higher-Order Programming with Effects (HOPE)
+          @ Co-located with the ICFP 2024 conference
+        </div>
 
         <div class="talk-links">
           <a
@@ -909,18 +966,15 @@
             href="https://icfp24.sigplan.org/details/hope-2024-papers/2/Amplifying-Contextual-Distance-in-Higher-Order-Languages-using-the-Law-of-Large-Numb"
             target="_blank"
             rel="noopener noreferrer">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             Details
           </a>
         </div>
       </div>
     </div>
 
-
   </div>
 </section>
-
-
 
 
 
@@ -972,7 +1026,87 @@
   </div>
 -->
 
-  <!-- 2025–2026 -->
+
+
+<!-- 2026–2027 -->
+<div class="teaching-year">
+  <div class="teaching-year-label">2026–2027</div>
+
+  <div class="teaching-courses">
+
+    <div class="course">
+      <div class="course-header">
+        <div>
+          <div class="course-title">
+            Software Engineering and Usability 1
+          </div>
+          <div class="small">
+            Faculty of Science and Engineering (FSI)
+            · Université Toulouse III – Paul Sabatier
+          </div>
+        </div>
+      </div>
+
+      <div class="course-content">
+        <div class="course-content-title">
+          Practical Sessions — OCaml
+        </div>
+
+        <div class="course-topic">
+          <p>
+            Types and expressions, pattern matching,
+            recursion on integers and lists.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- 2025–2026: ISAE-SUPAERO -->
+<div class="teaching-year">
+  <div class="teaching-year-label">2025–2026</div>
+
+  <div class="teaching-courses">
+
+    <div class="course">
+      <div class="course-header">
+        <div>
+          <div class="course-title">
+            Algorithms and Programming 
+          </div>
+          <div class="small">
+            ISAE-SUPAERO
+          </div>
+        </div>
+      </div>
+
+      <div class="course-content">
+        <div class="course-content-title">
+          Practical Sessions — OCaml
+        </div>
+
+        <div class="course-topic">
+          <p>
+            Algorithm design and analysis, functional
+            programming, abstract data types, lists
+            and sorting algorithms, MapReduce,
+            memoization, combinatorial search,
+            and logical modeling.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- 2025–2026
   <div class="teaching-year">
     <div class="teaching-year-label">2025–2026</div>
 
@@ -1031,10 +1165,13 @@
 
     </div>
   </div>
+
+-->
+
 <!-- AMU tutoring -->
 
 
-  <!-- 2025–2026 -->
+  <!-- 2022–2023 -->
   <div class="teaching-year">
     <div class="teaching-year-label">2022–2023</div>
 
